@@ -16,7 +16,7 @@ export default function Card({ result }) {
           width={500}
           height={300}
         />
-        <div>
+        <div className="p-2">
           <p className="line-clamp-2 text-md">{result.overview}</p>
           <h2 className="text-lg font-bold truncate">
             {result.title || result.name}
