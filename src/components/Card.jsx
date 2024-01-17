@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FiThumbsUp } from "react-icons/fi";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 export default function Card({ result }) {
   return (
@@ -19,7 +21,7 @@ export default function Card({ result }) {
         <div className="p-2">
           <p className="line-clamp-2 text-md">{result.overview}</p>
           <h2 className="text-lg font-bold truncate">
-            {result.title || result.name}
+            {result.title || <Skeleton />}
           </h2>
           <p className="flex items-center">
             {result.release_date || result.first_air_date}
